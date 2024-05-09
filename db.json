@@ -1,0 +1,31 @@
+{
+  "clients": [
+    {
+      "clientNumber": 1,
+      "name": "John",
+      "surname": "Doe",
+      "gender": "Male",
+      "personalId": "12345678901",
+      "mobile": "555555555",
+      "legalAddress": {
+        "country": "USA",
+        "city": "New York",
+        "address": "123 Main St."
+      },
+      "actualAddress": {
+        "country": "USA",
+        "city": "New York",
+        "address": "123 Main St."
+      }
+    }
+  ],
+  "accounts": [
+    {
+      "accountNumber": 1,
+      "clientNumber": 1,
+      "type": "Current",
+      "currency": "USD",
+      "status": "Active"
+    }
+  ]
+}

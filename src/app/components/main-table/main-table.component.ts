@@ -63,6 +63,8 @@ export class MainTableComponent {
       rating: 5,
     },
   ];
+  constructor() {}
+
   getSeverity(product: Product) {
     switch (product.inventoryStatus) {
       case 'INSTOCK':
