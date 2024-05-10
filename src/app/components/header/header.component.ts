@@ -11,7 +11,6 @@ import { DropdownModule } from 'primeng/dropdown';
 import { Client } from '../../models/client.model';
 import { nameValidator } from '../../Validators/name.validator';
 import { CommonModule } from '@angular/common';
-import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -67,6 +66,7 @@ export class HeaderComponent {
     );
     this.createClientForm.controls['clientNumber'].setValue(uniqueClientNumber);
     console.log(this.createClientForm);
+    this.createClientForm.reset();
     this.visible = !this.visible;
   }
 }
