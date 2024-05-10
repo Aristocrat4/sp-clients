@@ -4,6 +4,11 @@ import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { CommonModule } from '@angular/common';
 import { Product } from '../../models/account.model';
+import { Observable, map } from 'rxjs';
+import { Client } from '../../models/client.model';
+import { Store, select } from '@ngrx/store';
+import { ClientState } from '../../state/clients/client.reducer';
+import { selectClients } from '../../state/clients/client.selector';
 
 @Component({
   selector: 'app-main-table',
@@ -13,71 +18,11 @@ import { Product } from '../../models/account.model';
   styleUrl: './main-table.component.scss',
 })
 export class MainTableComponent {
-  products: Product[] = [
-    {
-      id: '1000',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
-    },
-    {
-      id: '1000',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
-    },
-    {
-      id: '1000',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
-    },
-    {
-      id: '1000',
-      code: 'f230fh0g3',
-      name: 'Bamboo Watch',
-      description: 'Product Description',
-      image: 'bamboo-watch.jpg',
-      price: 65,
-      category: 'Accessories',
-      quantity: 24,
-      inventoryStatus: 'INSTOCK',
-      rating: 5,
-    },
-  ];
-  constructor() {}
+  clients$: Observable<Client[]> = this.store
+    .select(selectClients)
+    .pipe(map((clients) => clients.slice().reverse()));
 
-  getSeverity(product: Product) {
-    switch (product.inventoryStatus) {
-      case 'INSTOCK':
-        return 'success';
+  constructor(private store: Store<ClientState>) {}
 
-      case 'LOWSTOCK':
-        return 'warning';
-
-      case 'OUTOFSTOCK':
-        return 'danger';
-
-      default:
-        return undefined;
-    }
-  }
+  ngOnInit() {}
 }

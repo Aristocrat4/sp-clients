@@ -4,7 +4,7 @@ export interface Client {
   surname: string;
   gender: 'Female' | 'Male';
   personalId: string;
-  mobile: string;
+  phoneNumber: string;
   legalAddress: Address;
   actualAddress: Address;
   photo?: string;

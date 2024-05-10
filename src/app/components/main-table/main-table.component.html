@@ -1,10 +1,10 @@
-<div class="card">
-  <p-dataView #dv [value]="products" [rows]="5" [paginator]="true">
+<div *ngIf="clients$ | async as client" class="card">
+  <p-dataView #dv [value]="client" [rows]="5" [paginator]="true">
     <ng-template pTemplate="list" let-products>
       <div class="grid grid-nogutter">
         <div
           class="col-12"
-          *ngFor="let item of products; let first = first"
+          *ngFor="let item of clients$ | async; let first = first"
           class="col-12"
         >
           <div
@@ -15,10 +15,8 @@
               <img
                 class="block xl:block mx-auto border-round w-full"
                 [src]="
-                  'https://primefaces.org/cdn/primeng/images/demo/product/' +
-                  item.image
+                  'https://primefaces.org/cdn/primeng/images/demo/product/bamboo-watch.jpg'
                 "
-                [alt]="item.name"
               />
             </div>
             <div
@@ -29,7 +27,7 @@
               >
                 <div>
                   <div class="text-lg font-medium text-900 mt-2">
-                    {{ item.name }}
+                    {{ item.name }} {{ item.surname }}
                   </div>
                 </div>
               </div>
@@ -40,7 +38,7 @@
                     icon="pi pi-shopping-cart"
                     class="flex-auto md:flex-initial white-space-nowrap"
                     label="Buy Now"
-                    [disabled]="item.inventoryStatus === 'OUTOFSTOCK'"
+                    [disabled]="false"
                   />
                 </div>
               </div>

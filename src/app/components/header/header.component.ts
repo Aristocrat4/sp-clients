@@ -11,6 +11,8 @@ import { DropdownModule } from 'primeng/dropdown';
 import { Client } from '../../models/client.model';
 import { nameValidator } from '../../Validators/name.validator';
 import { CommonModule } from '@angular/common';
+import { Store } from '@ngrx/store';
+import { createClient } from '../../state/clients/client.actions';
 
 @Component({
   selector: 'app-header',
@@ -29,7 +31,9 @@ export class HeaderComponent {
   visible: boolean = false;
   genders: string[] | undefined;
   createClientForm!: FormGroup;
-  constructor(private fb: FormBuilder) {}
+
+  constructor(private fb: FormBuilder, private store: Store) {}
+
   ngOnInit() {
     this.genders = ['Male', 'Female'];
     this.createClientForm = this.fb.group({
@@ -58,15 +62,38 @@ export class HeaderComponent {
   }
 
   showDialog() {
+    this.createClientForm.reset();
     this.visible = true;
   }
+
   onSubmit() {
     const uniqueClientNumber = Math.floor(
       (Math.random() + Math.random()) * 100000000
     );
     this.createClientForm.controls['clientNumber'].setValue(uniqueClientNumber);
-    console.log(this.createClientForm);
-    this.createClientForm.reset();
+    const newClient: Client = {
+      clientNumber: this.createClientForm.controls['clientNumber']?.value,
+      name: this.createClientForm.controls['name'].value,
+      surname: this.createClientForm.controls['surname'].value,
+      gender: this.createClientForm.controls['gender'].value,
+      personalId: this.createClientForm.controls['personalId'].value,
+      phoneNumber: this.createClientForm.controls['phoneNumber'].value,
+      legalAddress: {
+        country: this.createClientForm.get('legalAddress.countryLegal')?.value,
+        city: this.createClientForm.get('legalAddress.cityLegal')?.value,
+        address: this.createClientForm.get('legalAddress.addressLegal')?.value,
+      },
+      actualAddress: {
+        country: this.createClientForm.get('actualAddress.countryActual')
+          ?.value,
+        city: this.createClientForm.get('actualAddress.cityActual')?.value,
+        address: this.createClientForm.get('actualAddress.addressActual')
+          ?.value,
+      },
+      photo: this.createClientForm.controls['photo'].value,
+    };
+    console.log(newClient);
+    this.store.dispatch(createClient({ client: newClient }));
     this.visible = !this.visible;
   }
 }
