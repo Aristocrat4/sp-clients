@@ -5,14 +5,19 @@ export interface Client {
   gender: 'Female' | 'Male';
   personalId: string;
   phoneNumber: string;
-  legalAddress: Address;
-  actualAddress: Address;
+  legalAddress: LegalAddress;
+  actualAddress: ActualAddress;
   photo?: string;
   id?: '';
 }
 
-export interface Address {
-  country: string;
-  city: string;
-  address: string;
+export interface LegalAddress {
+  countryLegal: string;
+  cityLegal: string;
+  addressLegal: string;
+}
+export interface ActualAddress {
+  countryActual: string;
+  cityActual: string;
+  addressActual: string;
 }

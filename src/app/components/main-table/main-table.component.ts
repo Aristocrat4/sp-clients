@@ -10,6 +10,7 @@ import { Store, select } from '@ngrx/store';
 import { ClientState } from '../../state/clients/client.reducer';
 import { selectClients } from '../../state/clients/client.selector';
 import { deleteClient } from '../../state/clients/client.actions';
+import { DialogService } from '../../services/dialog.service';
 
 @Component({
   selector: 'app-main-table',
@@ -23,10 +24,18 @@ export class MainTableComponent {
     .select(selectClients)
     .pipe(map((clients) => clients.slice().reverse()));
 
-  constructor(private store: Store<ClientState>) {}
+  constructor(
+    private store: Store<ClientState>,
+    private dialogService: DialogService
+  ) {}
 
   ngOnInit() {}
   onDelete(clientNumber: string) {
     this.store.dispatch(deleteClient({ clientNumber }));
+  }
+  onEdit(client: Client) {
+    let newObj = { ...client };
+    delete newObj.id;
+    this.dialogService.showDialog(newObj);
   }
 }

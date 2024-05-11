@@ -5,6 +5,7 @@ import {
   createClientFailure,
   createClientSuccess,
   deleteClientSuccess,
+  editClientSuccess,
   initializeClientData,
 } from './client.actions';
 
@@ -39,5 +40,11 @@ export const clientReducer = createReducer(
   on(deleteClientSuccess, (state, { clientNumber }) => ({
     ...state,
     clients: state.clients.filter((c) => c.id !== clientNumber),
+  })),
+  on(editClientSuccess, (state, { client }) => ({
+    ...state,
+    clients: state.clients.map((c) =>
+      c.clientNumber === client.clientNumber ? client : c
+    ),
   }))
 );

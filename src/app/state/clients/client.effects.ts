@@ -8,6 +8,8 @@ import {
   createClientSuccess,
   deleteClient,
   deleteClientSuccess,
+  editClient,
+  editClientSuccess,
 } from './client.actions';
 
 @Injectable()
@@ -39,6 +41,22 @@ export class ClientEffects {
       )
     )
   );
+
+  editClient$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(editClient),
+      mergeMap((action) =>
+        this.clientService.updateClient(action.client).pipe(
+          map((client) => editClientSuccess({ client })),
+          catchError((error) => {
+            // Handle error
+            return EMPTY;
+          })
+        )
+      )
+    )
+  );
+
   constructor(
     private actions$: Actions,
     private clientService: ClientService

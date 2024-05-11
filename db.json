@@ -1,61 +1,142 @@
 {
   "clients": [
     {
-      "clientNumber": 1,
-      "name": "John",
-      "surname": "Doe",
+      "id": "28ea",
+      "clientNumber": 40380203,
+      "name": "dasdas",
+      "surname": "dasda",
       "gender": "Male",
-      "personalId": "12345678901",
-      "mobile": "555555555",
-      "legalAddress": {
-        "country": "USA",
-        "city": "New York",
-        "address": "123 Main St."
-      },
-      "actualAddress": {
-        "country": "USA",
-        "city": "New York",
-        "address": "123 Main St."
-      },
-      "id": "c7d6"
-    },
-    {
-      "id": "9ef4",
-      "clientNumber": 73563244,
-      "name": "galaktika",
-      "surname": "galaktika",
-      "gender": "Male",
-      "personalId": "12312312323",
+      "personalId": "12312312322",
       "phoneNumber": "512312322",
       "legalAddress": {
-        "country": "sada",
-        "city": "sdasda",
-        "address": "sdasda"
+        "countryLegal": "asda",
+        "cityLegal": "sdasd",
+        "addressLegal": "asdasd"
       },
       "actualAddress": {
-        "country": "sdasda",
-        "city": "sdasda",
-        "address": "sdasd"
+        "countryActual": "asdsda",
+        "cityActual": "asdasd",
+        "addressActual": "asdasd"
       },
       "photo": null
     },
     {
-      "id": "385f",
-      "clientNumber": 105872489,
-      "name": "natela",
-      "surname": "natela",
+      "id": "0cb2",
+      "clientNumber": 100706916,
+      "name": "asdasda",
+      "surname": "sdasd",
       "gender": "Male",
-      "personalId": "12312312323",
+      "personalId": "12312312322",
       "phoneNumber": "512312312",
       "legalAddress": {
-        "country": "asdasd",
-        "city": "asdas",
-        "address": "dasdasd"
+        "countryLegal": "asdasd",
+        "cityLegal": "asdas",
+        "addressLegal": "dasda"
       },
       "actualAddress": {
-        "country": "asdasda",
-        "city": "sdasdas",
-        "address": "dasdasd"
+        "countryActual": "sdasd",
+        "cityActual": "sdasd",
+        "addressActual": "asda"
+      },
+      "photo": ""
+    },
+    {
+      "id": "defa",
+      "clientNumber": 96690161,
+      "name": "bazera",
+      "surname": "bazera",
+      "gender": "Male",
+      "personalId": "12312312322",
+      "phoneNumber": "512312341",
+      "legalAddress": {
+        "countryLegal": "asdasd",
+        "cityLegal": "asdasd",
+        "addressLegal": "asdasd"
+      },
+      "actualAddress": {
+        "countryActual": "asdasd",
+        "cityActual": "asdasd",
+        "addressActual": "asdasdas"
+      },
+      "photo": null
+    },
+    {
+      "id": "ac74",
+      "clientNumber": 131622083,
+      "name": "bazeragiorgi",
+      "surname": "bazera",
+      "gender": "Male",
+      "personalId": "12312312322",
+      "phoneNumber": "512312341",
+      "legalAddress": {
+        "countryLegal": "asdasd",
+        "cityLegal": "asdasd",
+        "addressLegal": "asdasd"
+      },
+      "actualAddress": {
+        "countryActual": "asdasd",
+        "cityActual": "asdasd",
+        "addressActual": "asdasdas"
+      },
+      "photo": null
+    },
+    {
+      "id": "3f62",
+      "clientNumber": 56301703,
+      "name": "asdasda",
+      "surname": "sdasdchemii",
+      "gender": "Male",
+      "personalId": "12312312322",
+      "phoneNumber": "512312312",
+      "legalAddress": {
+        "countryLegal": "asdasd",
+        "cityLegal": "asdas",
+        "addressLegal": "dasda"
+      },
+      "actualAddress": {
+        "countryActual": "sdasd",
+        "cityActual": "sdasd",
+        "addressActual": "asda"
+      },
+      "photo": ""
+    },
+    {
+      "id": "306d",
+      "clientNumber": 119040616,
+      "name": "giorgi",
+      "surname": "giorgi",
+      "gender": "Female",
+      "personalId": "12312312323",
+      "phoneNumber": "512312341",
+      "legalAddress": {
+        "countryLegal": "asdasd",
+        "cityLegal": "asdas",
+        "addressLegal": "dasdasd"
+      },
+      "actualAddress": {
+        "countryActual": "asdasda",
+        "cityActual": "asdasd",
+        "addressActual": "sdasd"
+      },
+      "photo": null
+    },
+    {
+      "id": "56a7",
+      "clientNumber": 149156967,
+      "name": "lasha",
+      "surname": "intskirveli",
+      "gender": "Male",
+      "personalId": "12312312322",
+      "phoneNumber": "512312322",
+      "legalAddress": {
+        "countryLegal": "asda",
+        "cityLegal": "sdasd",
+        "addressLegal": "asdasd"
+      },
+      "actualAddress": {
+        "countryActual": "asdsda",
+        "cityActual": "asdasd",
+        "addressActual": "asdasd"
       },
       "photo": null
     }

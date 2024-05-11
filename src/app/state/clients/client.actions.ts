@@ -21,6 +21,16 @@ export const initializeClientData = createAction(
   props<{ clients: Client[] }>()
 );
 
+export const editClient = createAction(
+  '[Client] Edit Client',
+  props<{ client: Client }>()
+);
+
+export const editClientSuccess = createAction(
+  '[Client] Edit Client Success',
+  props<{ client: Client }>()
+);
+
 export const deleteClient = createAction(
   '[Client] Delete Client',
   props<{ clientNumber: string }>()
