@@ -32,13 +32,22 @@
                 </div>
               </div>
               <div class="flex flex-column md:align-items-end gap-5">
-                <div class="flex flex-row-reverse md:flex-row gap-2">
-                  <p-button icon="pi pi-heart" [outlined]="true" />
+                <div
+                  *ngIf="item.id"
+                  class="flex flex-row-reverse md:flex-row gap-2"
+                >
+                  <p-button icon="pi pi-eye" label="Details" />
                   <p-button
-                    icon="pi pi-shopping-cart"
+                    icon="pi pi-pen-to-square"
+                    label="Edit"
+                    severity="warning"
+                  />
+                  <p-button
+                    (click)="onDelete(item.id)"
+                    icon="pi pi-trash"
                     class="flex-auto md:flex-initial white-space-nowrap"
-                    label="Buy Now"
-                    [disabled]="false"
+                    severity="danger"
+                    label="Delete"
                   />
                 </div>
               </div>

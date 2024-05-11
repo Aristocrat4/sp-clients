@@ -20,126 +20,6 @@
       "id": "c7d6"
     },
     {
-      "id": "bfb6",
-      "clientNumber": 64626194,
-      "name": "asdasd",
-      "surname": "sadasd",
-      "gender": "Male",
-      "personalId": "12312312323",
-      "phoneNumber": "512121212",
-      "legalAddress": {
-        "country": "asda",
-        "city": "sdas",
-        "address": "dasdas"
-      },
-      "actualAddress": {
-        "country": "dasda",
-        "city": "sdasd",
-        "address": "asd"
-      },
-      "photo": null
-    },
-    {
-      "id": "0e21",
-      "clientNumber": 85117380,
-      "name": "asdas",
-      "surname": "dasdas",
-      "gender": "Male",
-      "personalId": "12312312322",
-      "phoneNumber": "523231232",
-      "legalAddress": {
-        "country": "asd",
-        "city": "asd",
-        "address": "asda"
-      },
-      "actualAddress": {
-        "country": "sdasd",
-        "city": "asda",
-        "address": "asd"
-      },
-      "photo": null
-    },
-    {
-      "id": "fe7a",
-      "clientNumber": 94604064,
-      "name": "ასდასდ",
-      "surname": "ასდასდ",
-      "gender": "Male",
-      "personalId": "12312312312",
-      "phoneNumber": "512312312",
-      "legalAddress": {
-        "country": "sda",
-        "city": "sdas",
-        "address": "dasd"
-      },
-      "actualAddress": {
-        "country": "dasd",
-        "city": "asdasd",
-        "address": "asd"
-      },
-      "photo": null
-    },
-    {
-      "id": "7fbd",
-      "clientNumber": 86740623,
-      "name": "asdasd",
-      "surname": "asdas",
-      "gender": "Male",
-      "personalId": "12312312323",
-      "phoneNumber": "512312342",
-      "legalAddress": {
-        "country": "sadas",
-        "city": "das",
-        "address": "dasd"
-      },
-      "actualAddress": {
-        "country": "ads",
-        "city": "dasd",
-        "address": "asd"
-      },
-      "photo": null
-    },
-    {
-      "id": "f9a4",
-      "clientNumber": 176794519,
-      "name": "sdfs",
-      "surname": "sdfsdf",
-      "gender": "Male",
-      "personalId": "23423423454",
-      "phoneNumber": "523423434",
-      "legalAddress": {
-        "country": "dsfsdf",
-        "city": "sdf",
-        "address": "sdfsdfs"
-      },
-      "actualAddress": {
-        "country": "fdsdf",
-        "city": "dfsdf",
-        "address": "sdfsd"
-      },
-      "photo": null
-    },
-    {
-      "id": "b2b2",
-      "clientNumber": 83465030,
-      "name": "asdasd",
-      "surname": "asd",
-      "gender": "Male",
-      "personalId": "12312312332",
-      "phoneNumber": "512312323",
-      "legalAddress": {
-        "country": "asdasd",
-        "city": "sdasd",
-        "address": "asdasd"
-      },
-      "actualAddress": {
-        "country": "asdasd",
-        "city": "asdasd",
-        "address": "asdad"
-      },
-      "photo": null
-    },
-    {
       "id": "9ef4",
       "clientNumber": 73563244,
       "name": "galaktika",
@@ -158,8 +38,29 @@
         "address": "sdasd"
       },
       "photo": null
+    },
+    {
+      "id": "385f",
+      "clientNumber": 105872489,
+      "name": "natela",
+      "surname": "natela",
+      "gender": "Male",
+      "personalId": "12312312323",
+      "phoneNumber": "512312312",
+      "legalAddress": {
+        "country": "asdasd",
+        "city": "asdas",
+        "address": "dasdasd"
+      },
+      "actualAddress": {
+        "country": "asdasda",
+        "city": "sdasdas",
+        "address": "dasdasd"
+      },
+      "photo": null
     }
   ],
+  "clientByNumber": "/clients?clientNumber=:clientNumber",
   "accounts": [
     {
       "accountNumber": 1,

@@ -19,4 +19,9 @@ export class ClientService {
   createClient(client: Client) {
     return this.http.post<Client>(`${this.apiUrl}/clients`, client);
   }
+
+  deleteClient(clientNumber: string): Observable<void> {
+    const url = `${this.apiUrl}/clients/${clientNumber}`;
+    return this.http.delete<void>(url);
+  }
 }

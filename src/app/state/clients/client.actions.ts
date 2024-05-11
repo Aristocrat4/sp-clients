@@ -20,3 +20,13 @@ export const initializeClientData = createAction(
   '[Client] Load Initial Client Data',
   props<{ clients: Client[] }>()
 );
+
+export const deleteClient = createAction(
+  '[Client] Delete Client',
+  props<{ clientNumber: string }>()
+);
+
+export const deleteClientSuccess = createAction(
+  '[Client] Delete Client Success',
+  props<{ clientNumber: string }>()
+);

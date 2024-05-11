@@ -4,6 +4,7 @@ import {
   createClient,
   createClientFailure,
   createClientSuccess,
+  deleteClientSuccess,
   initializeClientData,
 } from './client.actions';
 
@@ -34,5 +35,9 @@ export const clientReducer = createReducer(
   on(createClientSuccess, (state, { client }) => ({
     ...state,
     clients: [...state.clients, client],
+  })),
+  on(deleteClientSuccess, (state, { clientNumber }) => ({
+    ...state,
+    clients: state.clients.filter((c) => c.id !== clientNumber),
   }))
 );

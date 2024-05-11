@@ -8,6 +8,7 @@ export interface Client {
   legalAddress: Address;
   actualAddress: Address;
   photo?: string;
+  id?: '';
 }
 
 export interface Address {

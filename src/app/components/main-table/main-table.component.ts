@@ -9,6 +9,7 @@ import { Client } from '../../models/client.model';
 import { Store, select } from '@ngrx/store';
 import { ClientState } from '../../state/clients/client.reducer';
 import { selectClients } from '../../state/clients/client.selector';
+import { deleteClient } from '../../state/clients/client.actions';
 
 @Component({
   selector: 'app-main-table',
@@ -25,4 +26,7 @@ export class MainTableComponent {
   constructor(private store: Store<ClientState>) {}
 
   ngOnInit() {}
+  onDelete(clientNumber: string) {
+    this.store.dispatch(deleteClient({ clientNumber }));
+  }
 }

@@ -6,6 +6,8 @@ import {
   createClient,
   createClientFailure,
   createClientSuccess,
+  deleteClient,
+  deleteClientSuccess,
 } from './client.actions';
 
 @Injectable()
@@ -18,6 +20,20 @@ export class ClientEffects {
           map((client) => createClientSuccess({ client })),
           catchError((error) => {
             return of(createClientFailure({ error }));
+          })
+        )
+      )
+    )
+  );
+
+  deleteClient$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(deleteClient),
+      mergeMap((action) =>
+        this.clientService.deleteClient(action.clientNumber).pipe(
+          map(() => deleteClientSuccess({ clientNumber: action.clientNumber })),
+          catchError((error) => {
+            return EMPTY;
           })
         )
       )
