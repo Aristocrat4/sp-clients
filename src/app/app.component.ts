@@ -7,6 +7,7 @@ import { Store } from '@ngrx/store';
 import { ClientService } from './services/client.service';
 import { initializeClientData } from './state/clients/client.actions';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import { DialogComponent } from './components/dialog/dialog.component';
     HeaderComponent,
     DialogComponent,
     MainTableComponent,
+    DetailComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

@@ -1,0 +1,60 @@
+<div class="card flex justify-content-center">
+  <p-dialog
+    [header]="fullName"
+    [(visible)]="detailService.visible"
+    [modal]="true"
+    [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
+    [style]="{ width: '55vw' }"
+    [draggable]="false"
+    [resizable]="true"
+  >
+    <p>Client Number: {{ detailService.currentClientData?.clientNumber }}</p>
+    <p>Firstname: {{ detailService.currentClientData?.name }}</p>
+    <p>Surname: {{ detailService.currentClientData?.surname }}</p>
+    <p>Gender: {{ detailService.currentClientData?.gender }}</p>
+    <p>Personal ID Number: {{ detailService.currentClientData?.personalId }}</p>
+    <p>Phone Number: {{ detailService.currentClientData?.phoneNumber }}</p>
+    <div>
+      <h2>Legal Address</h2>
+      <div class="flex gap-4">
+        <span
+          >Country:
+          {{
+            detailService.currentClientData?.legalAddress?.countryLegal
+          }}</span
+        >
+        <span
+          >City:
+          {{ detailService.currentClientData?.legalAddress?.cityLegal }}</span
+        >
+        <span
+          >Address:
+          {{
+            detailService.currentClientData?.legalAddress?.addressLegal
+          }}</span
+        >
+      </div>
+    </div>
+    <div>
+      <h2>Actual Address</h2>
+      <div class="flex gap-4">
+        <span
+          >Country:
+          {{
+            detailService.currentClientData?.actualAddress?.countryActual
+          }}</span
+        >
+        <span
+          >City:
+          {{ detailService.currentClientData?.actualAddress?.cityActual }}</span
+        >
+        <span
+          >Address:
+          {{
+            detailService.currentClientData?.actualAddress?.addressActual
+          }}</span
+        >
+      </div>
+    </div>
+  </p-dialog>
+</div>

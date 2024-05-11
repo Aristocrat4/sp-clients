@@ -36,7 +36,11 @@
                   *ngIf="item.id"
                   class="flex flex-row-reverse md:flex-row gap-2"
                 >
-                  <p-button icon="pi pi-eye" label="Details" />
+                  <p-button
+                    (click)="onDetails(item)"
+                    icon="pi pi-eye"
+                    label="Details"
+                  />
                   <p-button
                     icon="pi pi-pen-to-square"
                     label="Edit"

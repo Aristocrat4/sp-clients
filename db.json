@@ -101,26 +101,6 @@
       "photo": ""
     },
     {
-      "id": "306d",
-      "clientNumber": 119040616,
-      "name": "giorgi",
-      "surname": "giorgi",
-      "gender": "Female",
-      "personalId": "12312312323",
-      "phoneNumber": "512312341",
-      "legalAddress": {
-        "countryLegal": "asdasd",
-        "cityLegal": "asdas",
-        "addressLegal": "dasdasd"
-      },
-      "actualAddress": {
-        "countryActual": "asdasda",
-        "cityActual": "asdasd",
-        "addressActual": "sdasd"
-      },
-      "photo": null
-    },
-    {
       "id": "56a7",
       "clientNumber": 149156967,
       "name": "lasha",
