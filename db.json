@@ -126,7 +126,10 @@
       "accountNumber": 23231,
       "clientNumber": 149156967,
       "type": "Current",
-      "currency": ["USD", "GEL"],
+      "currency": [
+        "USD",
+        "GEL"
+      ],
       "status": "Active",
       "id": "c7cb"
     },
@@ -134,9 +137,76 @@
       "accountNumber": 3321,
       "clientNumber": 149156967,
       "type": "Saving",
-      "currency": ["USD", "EUR"],
+      "currency": [
+        "USD",
+        "EUR"
+      ],
       "status": "Closed",
       "id": "c7cb"
+    },
+    {
+      "id": "e33c",
+      "clientNumber": 149156967,
+      "accountNumber": 158265730,
+      "type": "Savings",
+      "currency": [
+        "USD"
+      ],
+      "status": "Active"
+    },
+    {
+      "id": "4e27",
+      "clientNumber": 149156967,
+      "accountNumber": 129617554,
+      "type": "Accumulative",
+      "currency": [
+        "USD",
+        "EUR",
+        "GEL"
+      ],
+      "status": "Active"
+    },
+    {
+      "id": "a97b",
+      "clientNumber": 149156967,
+      "accountNumber": 53945167,
+      "type": "Savings",
+      "currency": [
+        "USD",
+        "EUR"
+      ],
+      "status": "Active"
+    },
+    {
+      "id": "2c15",
+      "clientNumber": 149156967,
+      "accountNumber": 37719898,
+      "type": "Accumulative",
+      "currency": [
+        "GEL",
+        "USD"
+      ],
+      "status": "Active"
+    },
+    {
+      "id": "a213",
+      "clientNumber": 149156967,
+      "accountNumber": 140784234,
+      "type": "Current",
+      "currency": [
+        "EUR"
+      ],
+      "status": "Active"
+    },
+    {
+      "id": "cf13",
+      "clientNumber": 56301703,
+      "accountNumber": 65118372,
+      "type": "Savings",
+      "currency": [
+        "EUR"
+      ],
+      "status": "Active"
     }
   ]
 }

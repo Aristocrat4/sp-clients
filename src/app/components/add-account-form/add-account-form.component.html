@@ -1,0 +1,75 @@
+<div class="add-account">
+  <form [formGroup]="accountForm">
+    <div class="card flex justify-content-around">
+      <div class="currencies">
+        <h3>Choose Currencies</h3>
+        <div class="card flex gap-3">
+          <div class="flex align-items-center">
+            <p-checkbox
+              formControlName="currency"
+              label="GEL"
+              name="currencies"
+              value="GEL"
+            />
+          </div>
+          <div class="flex align-items-center">
+            <p-checkbox
+              formControlName="currency"
+              label="USD"
+              name="currencies"
+              value="USD"
+            />
+          </div>
+          <div class="flex align-items-center">
+            <p-checkbox
+              formControlName="currency"
+              label="EUR"
+              name="currencies"
+              value="EUR"
+            />
+          </div>
+        </div>
+        <div
+          style="color: red"
+          *ngIf="accountForm.controls['currency'].status === 'INVALID'"
+        >
+          <div
+            *ngIf="accountForm.controls['currency'].touched && accountForm.controls['currency'].errors?.['required']"
+          >
+            Select at least 1 currency
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>Choose Type</h3>
+        <div class="card flex justify-content-center">
+          <p-dropdown
+            formControlName="type"
+            [options]="types"
+            placeholder="Select a Type"
+          />
+        </div>
+        <div
+          style="color: red"
+          *ngIf="accountForm.controls['type'].status === 'INVALID'"
+        >
+          <div
+            *ngIf="accountForm.controls['type'].touched && accountForm.controls['type'].errors?.['required']"
+          >
+            Select a type
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-content-center gap-2 mt-5">
+      <p-button label="Cancel" severity="secondary" (click)="onCancel()" />
+      <p-button
+        (click)="onAdd(clientNumber)"
+        [disabled]="!isFormValid()"
+        type="submit"
+        severity="success"
+        label="Add"
+      />
+    </div>
+  </form>
+</div>

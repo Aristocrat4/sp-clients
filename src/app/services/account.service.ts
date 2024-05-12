@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environment';
 import { Account } from '../models/account.model';
 import { Observable } from 'rxjs';
-149156967;
+
 @Injectable({
   providedIn: 'root',
 })
@@ -13,7 +13,7 @@ export class AccountService {
   constructor(private http: HttpClient) {}
 
   createAccount(account: Account) {
-    return this.http.post<Account>(`${this.apiUrl}/clients`, account);
+    return this.http.post<Account>(`${this.apiUrl}/accounts`, account);
   }
 
   getAllAccounts(): Observable<Account[]> {

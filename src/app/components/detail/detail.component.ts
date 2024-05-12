@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { TagModule } from 'primeng/tag';
 import { Store } from '@ngrx/store';
 import { selectAccounts } from '../../state/accounts/account.selector';
+import { AddAccountFormComponent } from '../add-account-form/add-account-form.component';
 
 @Component({
   selector: 'app-detail',
@@ -19,12 +20,14 @@ import { selectAccounts } from '../../state/accounts/account.selector';
     TagModule,
     CommonModule,
     DataViewModule,
+    AddAccountFormComponent,
   ],
   templateUrl: './detail.component.html',
   styleUrl: './detail.component.scss',
 })
 export class DetailComponent {
   visible: boolean = false;
+  showAddAccount: boolean = true;
 
   accountNumbers$: Observable<Account[]> = this.store.select(selectAccounts);
 
@@ -40,6 +43,15 @@ export class DetailComponent {
       this.detailService.currentClientData?.surname
     );
   }
+
+  onAddAccount() {
+    this.showAddAccount = true;
+  }
+
+  closeAddEvent(event: boolean) {
+    this.showAddAccount = event;
+  }
+
   showDialog() {
     this.visible = true;
   }

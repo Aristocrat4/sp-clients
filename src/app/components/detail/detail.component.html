@@ -123,7 +123,17 @@
             </ng-template>
           </p-dataView>
         </div>
-        <p-button icon="pi pi-plus" label="Add Account"></p-button>
+        <div *ngIf="showAddAccount">
+          <app-add-account-form
+            (closeAddAccountEvent)="closeAddEvent($event)"
+            [clientNumber]="detailService.currentClientData?.clientNumber"
+          ></app-add-account-form>
+        </div>
+        <p-button
+          (click)="onAddAccount()"
+          icon="pi pi-plus"
+          label="Add Account"
+        ></p-button>
       </div>
     </div>
   </p-dialog>

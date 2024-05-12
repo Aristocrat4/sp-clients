@@ -291,7 +291,7 @@
       </div>
       <div class="flex justify-content-end gap-2 mt-5">
         <p-button label="Cancel" severity="secondary" (click)="onCancel()" />
-        <p-button type="submit" label="Submit" />
+        <p-button [disabled]="!isFormValid()" type="submit" label="Submit" />
       </div>
     </form>
   </p-dialog>
