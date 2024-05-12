@@ -10,6 +10,8 @@ import { EffectsModule, provideEffects } from '@ngrx/effects';
 import { ClientEffects } from './state/clients/client.effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { clientReducer } from './state/clients/client.reducer';
+import { accountReducer } from './state/accounts/account.reducer';
+import { AccountEffects } from './state/accounts/account.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -20,9 +22,10 @@ export const appConfig: ApplicationConfig = {
     provideEffects(),
     importProvidersFrom(
       ReactiveFormsModule,
-      EffectsModule.forRoot([ClientEffects]),
+      EffectsModule.forRoot([ClientEffects, AccountEffects]),
       StoreModule.forRoot({
         clients: clientReducer,
+        accounts: accountReducer,
       }),
       StoreDevtoolsModule.instrument()
     ),

@@ -121,14 +121,21 @@
       "photo": null
     }
   ],
-  "clientByNumber": "/clients?clientNumber=:clientNumber",
   "accounts": [
     {
-      "accountNumber": 1,
-      "clientNumber": 1,
+      "accountNumber": 23231,
+      "clientNumber": 149156967,
       "type": "Current",
-      "currency": "USD",
+      "currency": ["USD", "GEL"],
       "status": "Active",
+      "id": "c7cb"
+    },
+    {
+      "accountNumber": 3321,
+      "clientNumber": 149156967,
+      "type": "Saving",
+      "currency": ["USD", "EUR"],
+      "status": "Closed",
       "id": "c7cb"
     }
   ]

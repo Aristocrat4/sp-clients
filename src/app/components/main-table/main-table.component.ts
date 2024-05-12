@@ -12,6 +12,7 @@ import { selectClients } from '../../state/clients/client.selector';
 import { deleteClient } from '../../state/clients/client.actions';
 import { DialogService } from '../../services/dialog.service';
 import { DetailsService } from '../../services/details.service';
+import { getAccounts } from '../../state/accounts/account.action';
 
 @Component({
   selector: 'app-main-table',
@@ -43,6 +44,6 @@ export class MainTableComponent {
 
   onDetails(client: Client) {
     this.detailService.showDialog(client);
-    console.log(client);
+    this.store.dispatch(getAccounts({ clientNumber: client.clientNumber }));
   }
 }

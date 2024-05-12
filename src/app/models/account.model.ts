@@ -2,7 +2,7 @@ export interface Account {
   accountNumber: number;
   clientNumber: number;
   type: 'Current' | 'Savings' | 'Accumulative';
-  currency: 'GEL' | 'USD' | 'EUR';
+  currency: string[];
   status: 'Active' | 'Closed';
 }
 
