@@ -29,4 +29,7 @@ export class ClientService {
     const url = `${this.apiUrl}/${client.clientNumber}`;
     return this.http.put<Client>(url, client);
   }
+  getClientById(clientId: string | null): Observable<Client> {
+    return this.http.get<Client>(`${this.apiUrl}/clients/${clientId}`);
+  }
 }

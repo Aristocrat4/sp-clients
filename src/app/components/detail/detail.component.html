@@ -1,140 +1,115 @@
-<div class="card flex justify-content-center">
-  <p-dialog
-    [header]="fullName"
-    [(visible)]="detailService.visible"
-    [modal]="true"
-    [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
-    [style]="{ width: '55vw' }"
-    [draggable]="false"
-    [resizable]="true"
-  >
-    <p>Client Number: {{ detailService.currentClientData?.clientNumber }}</p>
-    <p>Firstname: {{ detailService.currentClientData?.name }}</p>
-    <p>Surname: {{ detailService.currentClientData?.surname }}</p>
-    <p>Gender: {{ detailService.currentClientData?.gender }}</p>
-    <p>Personal ID Number: {{ detailService.currentClientData?.personalId }}</p>
-    <p>Phone Number: {{ detailService.currentClientData?.phoneNumber }}</p>
+<ng-container>
+  <a routerLink="/" class="p-button font-bold ml-auto mr-auto"> Homepage </a>
+  <div class="flex details">
     <div>
-      <h2>Legal Address</h2>
-      <div class="flex gap-4">
-        <span
-          >Country:
-          {{
-            detailService.currentClientData?.legalAddress?.countryLegal
-          }}</span
-        >
-        <span
-          >City:
-          {{ detailService.currentClientData?.legalAddress?.cityLegal }}</span
-        >
-        <span
-          >Address:
-          {{
-            detailService.currentClientData?.legalAddress?.addressLegal
-          }}</span
-        >
-      </div>
+      <img
+        src="https://static.vecteezy.com/system/resources/thumbnails/005/129/844/small/profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg"
+        alt="profile"
+      />
     </div>
     <div>
-      <h2>Actual Address</h2>
-      <div class="flex gap-4">
-        <span
-          >Country:
-          {{
-            detailService.currentClientData?.actualAddress?.countryActual
-          }}</span
-        >
-        <span
-          >City:
-          {{ detailService.currentClientData?.actualAddress?.cityActual }}</span
-        >
-        <span
-          >Address:
-          {{
-            detailService.currentClientData?.actualAddress?.addressActual
-          }}</span
-        >
+      <div>
+        <p><span>Client Number:</span> {{ client.clientNumber }}</p>
+        <p><span>Firstname:</span> {{ client.name }}</p>
+        <p><span>Surname:</span> {{ client.surname }}</p>
+        <p><span>Gender: </span>{{ client.gender }}</p>
+        <p><span>Personal ID Number:</span> {{ client.personalId }}</p>
+        <p><span>Phone Number: </span>{{ client.phoneNumber }}</p>
+      </div>
+
+      <div>
+        <h2>Legal Address</h2>
+        <div class="flex gap-4">
+          <span>Country: {{ client.legalAddress.countryLegal }}</span>
+          <span>City: {{ client.legalAddress.cityLegal }}</span>
+          <span>Address: {{ client.legalAddress.addressLegal }}</span>
+        </div>
       </div>
       <div>
-        <h2>Account Numbers</h2>
-        <div *ngIf="accountNumbers$ | async as accounts" class="card">
-          <p-dataView #dv [value]="accounts">
-            <ng-template pTemplate="list" let-products>
-              <div class="grid grid-nogutter">
+        <h2>Actual Address</h2>
+        <div class="flex gap-4">
+          <span>Country: {{ client.actualAddress.countryActual }}</span>
+          <span>City: {{ client.actualAddress.cityActual }}</span>
+          <span>Address: {{ client.actualAddress.addressActual }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-5">
+    <h2>Account Numbers</h2>
+    <div *ngIf="accountNumbers$ | async as accounts" class="card acc">
+      <p-dataView #dv [value]="accounts">
+        <ng-template pTemplate="list" let-products>
+          <div class="grid grid-nogutter">
+            <div
+              class="col-12"
+              *ngFor="let item of accountNumbers$ | async; let first = first"
+              class="col-12"
+            >
+              <div
+                class="flex flex-column sm:flex-row sm:align-items-center p-4 gap-3"
+                [ngClass]="{ 'border-top-1 surface-border': !first }"
+              >
+                <div class="md:w-10rem relative">
+                  <p>{{ item.accountNumber }}</p>
+                  <p-tag
+                    [value]="item.status"
+                    [severity]="getSeverity(item)"
+                    class="absolute"
+                    [style.left.px]="0"
+                    [style.top.px]="-14"
+                  />
+                </div>
                 <div
-                  class="col-12"
-                  *ngFor="
-                    let item of accountNumbers$ | async;
-                    let first = first
-                  "
-                  class="col-12"
+                  class="flex flex-column md:flex-row justify-content-between md:align-items-center flex-1 gap-4"
                 >
                   <div
-                    class="flex flex-column sm:flex-row sm:align-items-center p-4 gap-3"
-                    [ngClass]="{ 'border-top-1 surface-border': !first }"
+                    class="flex flex-row md:flex-column justify-content-between align-items-start gap-2"
                   >
-                    <div class="md:w-10rem relative">
-                      <p>{{ item.accountNumber }}</p>
-                      <p-tag
-                        [value]="item.status"
-                        [severity]="getSeverity(item)"
-                        class="absolute"
-                        [style.left.px]="0"
-                        [style.top.px]="-14"
-                      />
-                    </div>
-                    <div
-                      class="flex flex-column md:flex-row justify-content-between md:align-items-center flex-1 gap-4"
-                    >
-                      <div
-                        class="flex flex-row md:flex-column justify-content-between align-items-start gap-2"
+                    <div>
+                      <span class="font-medium text-secondary text-sm"
+                        >Currencies</span
                       >
-                        <div>
-                          <span class="font-medium text-secondary text-sm"
-                            >Currencies</span
-                          >
-                          <div class="text-lg font-medium text-900 mt-2">
-                            {{ item.currency }}
-                          </div>
-                        </div>
+                      <div class="text-lg font-medium text-900 mt-2">
+                        {{ item.currency }}
                       </div>
-                      <div>
-                        <span class="font-medium text-secondary text-sm"
-                          >Type</span
-                        >
-                        <div class="text-lg font-medium text-900 mt-2">
-                          {{ item.type }}
-                        </div>
-                      </div>
-                      <div class="flex flex-column md:align-items-end gap-5">
-                        <div class="flex flex-row-reverse md:flex-row gap-2">
-                          <p-button
-                            severity="danger"
-                            icon="pi pi-close"
-                            class="flex-auto md:flex-initial white-space-nowrap"
-                            label="Close Account"
-                          />
-                        </div>
-                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-medium text-secondary text-sm">Type</span>
+                    <div class="text-lg font-medium text-900 mt-2">
+                      {{ item.type }}
+                    </div>
+                  </div>
+                  <div class="flex flex-column md:align-items-end gap-5">
+                    <div class="flex flex-row-reverse md:flex-row gap-2">
+                      <p-button
+                        severity="danger"
+                        icon="pi pi-close"
+                        class="flex-auto md:flex-initial white-space-nowrap"
+                        label="Close Account"
+                      />
                     </div>
                   </div>
                 </div>
               </div>
-            </ng-template>
-          </p-dataView>
-        </div>
-        <div *ngIf="showAddAccount">
-          <app-add-account-form
-            (closeAddAccountEvent)="closeAddEvent($event)"
-            [clientNumber]="detailService.currentClientData?.clientNumber"
-          ></app-add-account-form>
-        </div>
-        <p-button
-          (click)="onAddAccount()"
-          icon="pi pi-plus"
-          label="Add Account"
-        ></p-button>
-      </div>
+            </div>
+          </div>
+        </ng-template>
+      </p-dataView>
     </div>
-  </p-dialog>
-</div>
+    <div *ngIf="showAddAccount">
+      <app-add-account-form
+        (closeAddAccountEvent)="closeAddEvent($event)"
+        [clientNumber]="client.clientNumber"
+      ></app-add-account-form>
+    </div>
+    <div class="mt-5">
+      <p-button
+        (click)="onAddAccount()"
+        icon="pi pi-plus"
+        label="Add Account"
+      ></p-button>
+    </div>
+  </div>
+</ng-container>

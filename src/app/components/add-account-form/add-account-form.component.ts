@@ -12,6 +12,7 @@ import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
 import { DropdownModule } from 'primeng/dropdown';
 import { createAccount } from '../../state/accounts/account.action';
+import { Account } from '../../models/account.model';
 
 @Component({
   selector: 'app-add-account-form',
@@ -33,7 +34,7 @@ export class AddAccountFormComponent {
 
   currencies: string[] = [];
   types = ['Current', 'Savings', 'Accumulative'];
-
+  accounts?: Account[];
   accountForm: FormGroup = this.fb.group({
     clientNumber: 0,
     accountNumber: 0,
@@ -61,4 +62,6 @@ export class AddAccountFormComponent {
   isFormValid(): boolean {
     return this.accountForm.valid;
   }
+
+  ngOnInit() {}
 }
