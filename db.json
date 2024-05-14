@@ -1,111 +1,111 @@
 {
   "clients": [
     {
-      "id": "0350",
-      "clientNumber": 123378714,
-      "name": "giorgi",
-      "surname": "botkoveli",
+      "id": "b9d4",
+      "clientNumber": 117408466,
+      "name": "იაგო",
+      "surname": "ხვიჩია",
       "gender": "Male",
-      "personalId": "12312312333",
-      "phoneNumber": "512312341",
+      "personalId": "12312312323",
+      "phoneNumber": "512312323",
       "legalAddress": {
-        "countryLegal": "USA",
-        "cityLegal": "asdasd",
-        "addressLegal": "asdasd"
+        "countryLegal": "ასდასდ",
+        "cityLegal": "ასდასდ",
+        "addressLegal": "ასდასდ"
       },
       "actualAddress": {
-        "countryActual": "asdasd",
-        "cityActual": "asdasd",
-        "addressActual": "asdasd"
+        "countryActual": "ასდასდ",
+        "cityActual": "ასდასდ",
+        "addressActual": "ასდასდ"
       },
       "photo": ""
     },
     {
-      "id": "42f1",
-      "clientNumber": 45603336,
-      "name": "გიორგი",
-      "surname": "გიორგი",
-      "gender": "Female",
+      "id": "dd05",
+      "clientNumber": 69231077,
+      "name": "ჰერმან",
+      "surname": "საბო",
+      "gender": "Male",
       "personalId": "12312312322",
       "phoneNumber": "512312323",
       "legalAddress": {
-        "countryLegal": "ასდასდას",
-        "cityLegal": "დასდასდ",
-        "addressLegal": "ასდასდა"
+        "countryLegal": "ასდასდ",
+        "cityLegal": "ასდასდ",
+        "addressLegal": "სადასდ"
       },
       "actualAddress": {
-        "countryActual": "სდასდასდ",
-        "cityActual": "დასდასდ",
-        "addressActual": "ასდასდას"
+        "countryActual": "ასდასდ",
+        "cityActual": "ასდასდ",
+        "addressActual": "ასდასდა"
       },
       "photo": null
     },
     {
-      "id": "1278",
-      "clientNumber": 99373606,
-      "name": "დათო",
-      "surname": "გვარამია",
-      "gender": "Female",
-      "personalId": "12312312323",
-      "phoneNumber": "512312312",
+      "id": "42fb",
+      "clientNumber": 56131948,
+      "name": "ლევან",
+      "surname": "ხაბეიშვილი",
+      "gender": "Male",
+      "personalId": "12312312322",
+      "phoneNumber": "512312323",
       "legalAddress": {
-        "countryLegal": "ასდას",
-        "cityLegal": "დასდასდ",
-        "addressLegal": "ასდსდა"
+        "countryLegal": "ასდასდას",
+        "cityLegal": "დასდას",
+        "addressLegal": "დასდასდა"
       },
       "actualAddress": {
-        "countryActual": "სდასდასდ",
-        "cityActual": "ასდადასდ",
+        "countryActual": "სდადსა",
+        "cityActual": "დასდასდ",
         "addressActual": "ასდასდ"
       },
       "photo": null
     },
     {
-      "id": "2c48",
-      "clientNumber": 51795334,
-      "name": "nugzar",
-      "surname": "gorgiladze",
+      "id": "5ca6",
+      "clientNumber": 73113922,
+      "name": "გიორგი",
+      "surname": "ვაშაძე",
       "gender": "Male",
-      "personalId": "12312312312",
-      "phoneNumber": "512312312",
-      "legalAddress": {
-        "countryLegal": "adasd",
-        "cityLegal": "dasd",
-        "addressLegal": "sadasd"
-      },
-      "actualAddress": {
-        "countryActual": "asdasd",
-        "cityActual": "asdasd",
-        "addressActual": "asdasd"
-      },
-      "photo": null
-    },
-    {
-      "id": "797e",
-      "clientNumber": 159951973,
-      "name": "Mariam",
-      "surname": "baratashvili",
-      "gender": "Female",
-      "personalId": "12312312342",
+      "personalId": "12312312323",
       "phoneNumber": "512312323",
       "legalAddress": {
-        "countryLegal": "dasdasd",
-        "cityLegal": "asdasdasd",
-        "addressLegal": "asdasdasd"
+        "countryLegal": "ასდასდ",
+        "cityLegal": "ასდასდ",
+        "addressLegal": "ასდასდ"
       },
       "actualAddress": {
-        "countryActual": "asdasda",
-        "cityActual": "sdasdasda",
-        "addressActual": "sdasda"
+        "countryActual": "ასდასდასდ",
+        "cityActual": "ასდასდ",
+        "addressActual": "ასდასდა"
       },
       "photo": null
     },
     {
-      "id": "94aa",
-      "clientNumber": 63655508,
-      "name": "გურამ",
-      "surname": "გურამიშვილი",
+      "id": "3f25",
+      "clientNumber": 39326526,
+      "name": "კახა",
+      "surname": "კალაძე",
       "gender": "Male",
+      "personalId": "12312312323",
+      "phoneNumber": "512312323",
+      "legalAddress": {
+        "countryLegal": "ადსდ",
+        "cityLegal": "ასდასდ",
+        "addressLegal": "ასდა"
+      },
+      "actualAddress": {
+        "countryActual": "ასდასდ",
+        "cityActual": "ასდასდა",
+        "addressActual": "სდასდა"
+      },
+      "photo": null
+    },
+    {
+      "id": "106d",
+      "clientNumber": 89923062,
+      "name": "ანი",
+      "surname": "წითლიძე",
+      "gender": "Female",
       "personalId": "12312312323",
       "phoneNumber": "512312323",
       "legalAddress": {
@@ -114,31 +114,51 @@
         "addressLegal": "ასდასდ"
       },
       "actualAddress": {
-        "countryActual": "დასდასდას",
-        "cityActual": "დასდასდ",
-        "addressActual": "ასდასდ"
+        "countryActual": "ასდასდ",
+        "cityActual": "ასდასდ",
+        "addressActual": "ასდასდა"
       },
       "photo": null
     },
     {
-      "id": "18d7",
-      "clientNumber": 88256958,
-      "name": "giorgifsdf",
-      "surname": "botkoveli",
+      "id": "adfc",
+      "clientNumber": 193458514,
+      "name": "hey",
+      "surname": "hey",
       "gender": "Male",
-      "personalId": "12312312333",
-      "phoneNumber": "512312341",
+      "personalId": "12312312323",
+      "phoneNumber": "512312323",
       "legalAddress": {
-        "countryLegal": "USA",
-        "cityLegal": "asdasd",
+        "countryLegal": "sdasda",
+        "cityLegal": "sdasda",
+        "addressLegal": "sdasda"
+      },
+      "actualAddress": {
+        "countryActual": "asdas",
+        "cityActual": "dasdasd",
+        "addressActual": "asd"
+      },
+      "photo": "https://ucarecdn.com/00b738b5-8f7e-410f-be9d-47313391b11f/"
+    },
+    {
+      "id": "d985",
+      "clientNumber": 20752731,
+      "name": "joni",
+      "surname": "jonishvili",
+      "gender": "Male",
+      "personalId": "12312312314",
+      "phoneNumber": "512312322",
+      "legalAddress": {
+        "countryLegal": "asda",
+        "cityLegal": "dasd",
         "addressLegal": "asdasd"
       },
       "actualAddress": {
         "countryActual": "asdasd",
-        "cityActual": "asdasd",
-        "addressActual": "asdasd"
+        "cityActual": "asda",
+        "addressActual": "sdasd"
       },
-      "photo": ""
+      "photo": "https://ucarecdn.com/da7b837d-11aa-485b-bf7f-fd95b89f5284/"
     }
   ],
   "accounts": [
@@ -298,6 +318,27 @@
       "currency": [
         "EUR",
         "USD"
+      ],
+      "status": "Active"
+    },
+    {
+      "id": "8ed5",
+      "clientNumber": 123378714,
+      "accountNumber": 164567219,
+      "type": "Savings",
+      "currency": [
+        "EUR",
+        "USD"
+      ],
+      "status": "Active"
+    },
+    {
+      "id": "b294",
+      "clientNumber": 20752731,
+      "accountNumber": 116441374,
+      "type": "Savings",
+      "currency": [
+        "EUR"
       ],
       "status": "Active"
     }

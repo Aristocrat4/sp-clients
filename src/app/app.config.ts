@@ -3,7 +3,10 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
-import { provideAnimations } from '@angular/platform-browser/animations';
+import {
+  BrowserAnimationsModule,
+  provideAnimations,
+} from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StoreModule, provideStore } from '@ngrx/store';
 import { EffectsModule, provideEffects } from '@ngrx/effects';
@@ -12,6 +15,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { clientReducer } from './state/clients/client.reducer';
 import { accountReducer } from './state/accounts/account.reducer';
 import { AccountEffects } from './state/accounts/account.effects';
+import { environment } from '../environment';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -29,5 +33,6 @@ export const appConfig: ApplicationConfig = {
       }),
       StoreDevtoolsModule.instrument()
     ),
+    BrowserAnimationsModule,
   ],
 };

@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import {
+  CUSTOM_ELEMENTS_SCHEMA,
+  Component,
+  ElementRef,
+  ViewChild,
+} from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -14,6 +19,10 @@ import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { DropdownModule } from 'primeng/dropdown';
+import * as LR from '@uploadcare/blocks';
+import '@uploadcare/blocks/web/lr-file-uploader-regular.min.css';
+
+LR.registerBlocks(LR);
 
 @Component({
   selector: 'app-dialog',
@@ -27,8 +36,14 @@ import { DropdownModule } from 'primeng/dropdown';
   ],
   templateUrl: './dialog.component.html',
   styleUrl: './dialog.component.scss',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class DialogComponent {
+  @ViewChild('ctxProvider', { static: true }) ctxProviderRef!: ElementRef<
+    InstanceType<LR.UploadCtxProvider>
+  >;
+  files: LR.OutputFileEntry<'success'>[] = [];
+
   genders = ['Male', 'Female'];
   createClientForm: FormGroup = this.fb.group({
     clientNumber: 0,
@@ -62,7 +77,19 @@ export class DialogComponent {
         this.createClientForm.setValue(client);
       }
     });
+    this.ctxProviderRef.nativeElement.addEventListener(
+      'change',
+      this.handleChangeEvent
+    );
   }
+
+  handleChangeEvent = async (event: LR.EventMap['change']) => {
+    this.files = (await event.detail.allEntries.filter(
+      (file) => file.status === 'success'
+    )) as LR.OutputFileEntry<'success'>[];
+
+    this.createClientForm.controls['photo'].setValue(this.files[0]?.cdnUrl);
+  };
 
   onHide() {
     this.createClientForm.reset();

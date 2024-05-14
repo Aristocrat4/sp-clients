@@ -40,7 +40,6 @@ export class MainTableComponent {
   constructor(
     private store: Store<ClientState>,
     private dialogService: DialogService,
-    private detailService: DetailsService,
     private route: Router
   ) {}
 
@@ -56,7 +55,6 @@ export class MainTableComponent {
 
   onDetails(client: Client) {
     this.route.navigate([`client/${client.id}`]);
-    // this.detailService.showDialog(client);
     this.store.dispatch(getAccounts({ clientNumber: client.clientNumber }));
   }
 }

@@ -289,6 +289,23 @@
           </div>
         </div>
       </div>
+      <div class="image">
+        <h3>Image</h3>
+        <lr-config
+          multiple="false"
+          removeCopyright="true"
+          ctx-name="uploader"
+          pubkey="f14056622dbcb80af2ca"
+        ></lr-config>
+        <lr-file-uploader-minimal
+          ctx-name="uploader"
+          css-src="https://cdn.jsdelivr.net/npm/@uploadcare/blocks@0.39.0/web/lr-file-uploader-regular.min.css"
+        ></lr-file-uploader-minimal>
+        <lr-upload-ctx-provider
+          ctx-name="uploader"
+          #ctxProvider
+        ></lr-upload-ctx-provider>
+      </div>
       <div class="flex justify-content-end gap-2 mt-5">
         <p-button label="Cancel" severity="secondary" (click)="onCancel()" />
         <p-button [disabled]="!isFormValid()" type="submit" label="Submit" />

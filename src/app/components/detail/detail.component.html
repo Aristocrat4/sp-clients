@@ -1,9 +1,12 @@
 <ng-container>
   <a routerLink="/" class="p-button font-bold ml-auto mr-auto"> Homepage </a>
   <div class="flex details">
-    <div>
+    <div *ngIf="client.photo">
+      <img src="{{ client.photo }}/-/preview/200x200/" alt="profile" />
+    </div>
+    <div *ngIf="!client.photo">
       <img
-        src="https://static.vecteezy.com/system/resources/thumbnails/005/129/844/small/profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg"
+        src="https://ucarecdn.com/842f8362-12df-45ac-a807-bbaeefc06444/-/preview/200x200/"
         alt="profile"
       />
     </div>
